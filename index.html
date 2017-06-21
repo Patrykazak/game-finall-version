@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0"/>
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="container">			
+		<button id="startGry" class="submita">Zagraj</button>
+		<button id='goback' onclick='goBack()' class="submita">Wróc na stronę główną</button>
+		<img id='instru' style='display: none;' src='images/tlo.png'/>
+		<button class="submita" id='clicker'>Instrukcja</button>			
+	</div>
+	<div id='timer'></div>
+	<div id='topscore'></div>
+	<div id="scoreLabel"></div>
+	<div class="background-gry"></div>
+	<script src=jquery-3.2.1.min.js></script>
+	<script src="js.js"></script>
+	<script>
+		$('#clicker').on('click',function(){
+			$('#instru').fadeToggle(1000);
+		});
+
+		// $('#topscore').click(localStorage.clear('maxscore'));
+
+		function goBack(){
+			window.history.back();
+		}
+		<!-- "location.href='../index.html'" -->
+	</script>
+</body>
+</html>
